@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 import time
 import os
-os.chdir("E:\Pycharm")
+os.chdir("Put your file or folder location here")
 
 #Speaking Functions
 engine = pyttsx3.init('sapi5')
@@ -28,14 +28,14 @@ driver = webdriver.Chrome(chrome_options=opt, executable_path='E://chromedriver_
 driver.get('https://accounts.google.com/signin/v2/identifier?service=classroom&continue=https%3A%2F%2Fclassroom.google.com%2F&flowName=GlifWebSignIn&flowEntry=AddSession')
 Username = driver.find_element_by_xpath('//*[@id="identifierId"]')
 Username.click()
-Username.send_keys('om.5283@kvsropatna.in')
+Username.send_keys('Put your Email address')
 speak("Email has entered Sucessfully")
 Next = driver.find_element_by_xpath('//*[@id="identifierNext"]/div/button/div[2]')
 Next.click()
 time.sleep(5)
 Password = driver.find_element_by_xpath('//*[@id="password"]/div[1]/div/div[1]/input')
 Password.click()
-Password.send_keys('password@')
+Password.send_keys('Enter your password')
 speak("Password has enterd sucessfully")
 Next1 = driver.find_element_by_xpath('//*[@id="passwordNext"]/div/button/div[2]')
 Next1.click()
